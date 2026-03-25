@@ -2,94 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Webinoid | AI Strategy & SGE Systems</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Webinoid | The Future of AI Search</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #000000; --card: #0a0a0a; --accent: #6366f1; --text-main: #ffffff; --text-muted: #a1a1aa; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-main); -webkit-font-smoothing: antialiased; }
-        .hero-gradient { background: linear-gradient(135deg, #fff 0%, #818cf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .service-card { background: var(--card); border: 1px solid #1a1a1a; transition: border 0.3s ease; }
-        .service-card:hover { border-color: var(--accent); }
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
+        .monumental-text { 
+            background: linear-gradient(180deg, #FFFFFF 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+        }
+        .glass-panel { background: #0a0a0a; border: 1px solid #1a1a1a; }
+        .btn-primary { background: #6366f1; box-shadow: 0 0 30px rgba(99,102,241,0.4); }
         
-        /* The "Anti-Kid" Scale: Precision Spacing */
+        /* Fixed Scaling for 'Big' Vision */
         @media (max-width: 640px) {
-            .mobile-title { font-size: 2.8rem !important; line-height: 1.1; }
-            .section-padding { padding-top: 3rem; padding-bottom: 3rem; }
-            .card-grid { gap: 1rem !important; }
+            .hero-size { font-size: 4rem !important; }
+            .sub-size { font-size: 1.25rem !important; line-height: 1.4; color: #e5e7eb; }
+            .card-title { font-size: 1.75rem !important; }
         }
     </style>
 </head>
-<body class="selection:bg-indigo-500 selection:text-white">
+<body class="antialiased selection:bg-indigo-500">
 
-    <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10 px-6 py-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tighter uppercase italic">WEBINOID<span class="text-indigo-500">.</span></div>
-            <a href="mailto:gorlevivekanand@gmail.com" class="text-xs font-bold bg-white text-black px-4 py-2 rounded-md hover:bg-indigo-500 hover:text-white transition-all uppercase tracking-tighter">Get in Touch</a>
-        </div>
+    <nav class="p-6 flex justify-between items-center border-b border-white/5">
+        <div class="text-2xl font-black tracking-tighter italic">WEBINOID<span class="text-indigo-500">.</span></div>
+        <a href="#contact" class="bg-white text-black px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest">Connect</a>
     </nav>
 
-    <section class="section-padding px-6 pt-16 pb-12">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="inline-block text-indigo-400 text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Enterprise AI Strategy</span>
-            <h1 class="mobile-title text-6xl md:text-8xl font-extrabold mb-6 tracking-tight hero-gradient">The Future of <br>Search & Tech.</h1>
-            <p class="text-base md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-10">
-                Architecting high-performance software and SEO systems specifically designed for the <span class="text-white font-semibold">Search Generative Experience (SGE)</span> era.
+    <section class="px-6 py-24 text-center">
+        <div class="max-w-5xl mx-auto">
+            <p class="text-indigo-500 font-bold tracking-[0.5em] uppercase text-[10px] mb-8">Established 2026</p>
+            <h1 class="hero-size text-7xl md:text-9xl font-black monumental-text mb-10">
+                THE FUTURE<br>OF SEARCH.
+            </h1>
+            <p class="sub-size text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12">
+                We architect <span class="text-white font-bold underline decoration-indigo-500 underline-offset-8">SGE-ready</span> systems for brands that refuse to be left behind by the AI shift.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#services" class="bg-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all">View Expertise</a>
-                <a href="#contact" class="border border-zinc-800 px-8 py-4 rounded-xl font-bold text-lg hover:bg-zinc-900">Contact Me</a>
+            <div class="flex flex-col gap-4 items-center">
+                <a href="#contact" class="btn-primary w-full max-w-xs py-5 rounded-2xl font-black text-xl uppercase tracking-tight">Claim the Future</a>
+                <a href="#services" class="text-gray-500 font-bold hover:text-white transition-all">View Our Capabilities ↓</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="section-padding px-6 max-w-6xl mx-auto">
-        <div class="card-grid grid md:grid-cols-3 gap-6">
-            <div class="service-card p-8 rounded-2xl">
-                <div class="w-8 h-[2px] bg-indigo-500 mb-6"></div>
-                <h3 class="text-xl font-bold mb-3 text-white">Development</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">High-scale web and mobile architectures. Built for speed, security, and global deployment.</p>
-            </div>
-            <div class="service-card p-8 rounded-2xl">
-                <div class="w-8 h-[2px] bg-purple-500 mb-6"></div>
-                <h3 class="text-xl font-bold mb-3 text-white">SGE Strategy</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">Technical SEO for the AI age. We ensure your brand is the top citation in AI-generated search answers.</p>
-            </div>
-            <div class="service-card p-8 rounded-2xl">
-                <div class="w-8 h-[2px] bg-pink-500 mb-6"></div>
-                <h3 class="text-xl font-bold mb-3 text-white">AI Automation</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">Integrating custom LLMs and AI agents into your business workflows to cut costs and scale throughput.</p>
-            </div>
+    <section id="services" class="px-4 py-12 max-w-6xl mx-auto space-y-4">
+        <div class="glass-panel p-10 rounded-[2.5rem] relative overflow-hidden">
+            <h3 class="card-title text-3xl font-black mb-4 uppercase italic text-indigo-400">01. Architecture</h3>
+            <p class="text-lg md:text-xl text-gray-200 leading-snug">Elite-level mobile and web engineering built for the high-velocity demands of modern tech stacks.</p>
+        </div>
+        
+        <div class="glass-panel p-10 rounded-[2.5rem] border-purple-500/20">
+            <h3 class="card-title text-3xl font-black mb-4 uppercase italic text-purple-400">02. Intelligence</h3>
+            <p class="text-lg md:text-xl text-gray-200 leading-snug">SGE SEO and LLM optimization. We don't just rank you on Google; we rank you in the AI's mind.</p>
         </div>
     </section>
 
-    <section id="contact" class="section-padding px-6 max-w-4xl mx-auto">
-        <div class="bg-zinc-950 border border-zinc-900 p-8 md:p-12 rounded-[2rem]">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold mb-2">Let's Build.</h2>
-                <p class="text-zinc-500 text-sm">Typical response time: < 24 hours</p>
-            </div>
+    <section id="contact" class="px-6 py-24">
+        <div class="max-w-4xl mx-auto glass-panel p-10 md:p-20 rounded-[3rem] text-center border-indigo-500/30">
+            <h2 class="text-5xl font-black mb-6">LET'S BUILD IT.</h2>
+            <p class="text-gray-400 mb-12 text-lg">Partner with Vivekanand Gorle for your next AI implementation.</p>
             
-            <form action="https://formspree.io/f/xvzvpenb" method="POST" class="space-y-4">
-                <div class="grid md:grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="Name" required class="w-full bg-black border border-zinc-800 p-4 rounded-xl outline-none focus:border-indigo-500 text-sm">
-                    <input type="email" name="_replyto" placeholder="Email" required class="w-full bg-black border border-zinc-800 p-4 rounded-xl outline-none focus:border-indigo-500 text-sm">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                <div class="text-center">
+                    <p class="text-gray-600 font-bold uppercase text-[10px] tracking-widest mb-2">Direct Channel</p>
+                    <a href="mailto:gorlevivekanand@gmail.com" class="text-2xl font-bold text-white hover:text-indigo-400">gorlevivekanand@gmail.com</a>
                 </div>
-                <textarea name="message" placeholder="Briefly describe your project..." rows="4" required class="w-full bg-black border border-zinc-800 p-4 rounded-xl outline-none focus:border-indigo-500 text-sm"></textarea>
-                <button type="submit" class="w-full bg-white text-black py-4 rounded-xl font-bold text-base hover:bg-zinc-200 transition-all">Submit Brief</button>
-            </form>
-
-            <div class="mt-12 pt-10 border-t border-zinc-900 text-center flex flex-col md:flex-row justify-center gap-8 items-center">
-                <a href="mailto:gorlevivekanand@gmail.com" class="text-zinc-300 font-semibold hover:text-indigo-400 transition-colors">gorlevivekanand@gmail.com</a>
-                <span class="hidden md:block text-zinc-800">|</span>
-                <p class="text-xl font-black text-white">+91 8143529847</p>
+                <div class="text-center">
+                    <p class="text-gray-600 font-bold uppercase text-[10px] tracking-widest mb-2">Priority Line</p>
+                    <p class="text-3xl font-black">+91 8143529847</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-[10px] text-zinc-600 font-bold uppercase tracking-[0.4em]">
-        &copy; 2026 Webinoid Digital Strategy
+    <footer class="py-20 text-center opacity-20">
+        <p class="text-[10px] font-bold tracking-[1em]">WEBINOID DIGITAL STRATEGY &copy; 2026</p>
     </footer>
 
 </body>
