@@ -9,33 +9,37 @@
     <style>
         body { font-family: 'Inter', sans-serif; background: #000; color: #fff; margin: 0; overflow: hidden; }
         .hero-title { line-height: 0.85; letter-spacing: -0.05em; text-transform: uppercase; }
-        .glass-card { background: #0a0a0a; border: 1px solid #222; transition: all 0.3s ease; }
+        .glass-card { background: #0a0a0a; border: 1px solid #222; }
         
-        /* DESKTOP: Proportional Scaling */
+        /* DESKTOP: Proportional Growth Logic */
         @media (min-width: 1024px) {
             html, body { height: 100vh; }
             .main-content { 
                 height: calc(100vh - 90px); 
                 display: flex; 
                 flex-direction: column; 
-                justify-content: space-around; /* Distributes sections evenly to kill the bottom void */
+                justify-content: space-between; 
                 padding: 2vh 5vw; 
             }
-            /* Growing everything in proportion */
-            .hero-title { font-size: 9vw !important; } 
-            .hero-desc { font-size: 1.8rem !important; margin-top: 1.5rem; }
-            .service-title { font-size: 1.6rem !important; }
-            .service-text { font-size: 1.1rem !important; line-height: 1.4; }
-            .form-heading { font-size: 5vw !important; }
-            .input-field { font-size: 1.2rem !important; padding: 1.5rem !important; }
-            .footer-info { font-size: 1.2rem !important; }
+            /* Scaling the "Child" proportionally */
+            .hero-title { font-size: 8.5vw !important; } 
+            .hero-desc { font-size: 1.8rem !important; }
+            
+            .service-title { font-size: 1.8rem !important; } /* Increased from small to proportional */
+            .service-text { font-size: 1.1rem !important; }
+
+            .form-heading { font-size: 6vw !important; } /* Brought closer to Hero size */
+            .input-field { font-size: 1.4rem !important; padding: 1.8rem !important; }
+            .submit-btn { font-size: 1.8rem !important; padding: 1.5rem !important; }
+            .footer-info { font-size: 1.3rem !important; }
         }
 
-        /* MOBILE: Reverts to standard flow for readability */
+        /* MOBILE: Vertical Stack */
         @media (max-width: 1023px) {
             body { overflow-y: auto; }
-            .main-content { padding: 40px 20px; gap: 40px; }
-            .hero-title { font-size: 14vw !important; }
+            .main-content { padding: 30px 20px; gap: 40px; }
+            .hero-title { font-size: 13vw !important; }
+            .form-heading { font-size: 10vw !important; }
         }
     </style>
 </head>
@@ -51,8 +55,8 @@
     <main class="main-content">
         <section class="text-center">
             <h1 class="hero-title font-black">THE FUTURE<br>OF SEARCH.</h1>
-            <p class="hero-desc text-gray-300 max-w-4xl mx-auto font-medium">
-                Architecting <span class="text-white font-extrabold">SGE-ready</span> systems for the next generation of business.
+            <p class="hero-desc text-gray-300 max-w-4xl mx-auto font-medium mt-4">
+                Architecting <span class="text-white font-extrabold">SGE-ready</span> systems for the next generation.
             </p>
         </section>
 
@@ -67,12 +71,12 @@
             </div>
             <div class="glass-card p-10 rounded-[2.5rem] border-white/5">
                 <h3 class="service-title text-pink-500 font-black uppercase mb-4 italic">03. Automation</h3>
-                <p class="text-gray-300 service-text">Deploying AI agents to automate complex workflows and scale growth.</p>
+                <p class="service-text text-gray-300">Deploying AI agents to automate complex workflows and scale growth.</p>
             </div>
         </section>
 
         <section id="contact">
-            <div class="glass-card p-12 md:p-16 rounded-[4rem] border-indigo-500/20">
+            <div class="glass-card p-12 md:p-14 rounded-[4rem] border-indigo-500/20">
                 <h2 class="form-heading text-center font-black mb-10 uppercase">LET'S BUILD.</h2>
                 
                 <form action="https://formspree.io/f/xvzvpenb" method="POST" class="max-w-6xl mx-auto">
@@ -81,12 +85,12 @@
                         <input type="email" name="email" placeholder="EMAIL" required class="input-field bg-black border border-white/10 rounded-2xl text-white outline-none focus:border-indigo-500 transition-all">
                     </div>
                     <textarea name="message" placeholder="PROJECT BRIEF" rows="2" required class="input-field w-full bg-black border border-white/10 rounded-2xl text-white outline-none focus:border-indigo-500 mb-8 transition-all"></textarea>
-                    <button type="submit" class="w-full bg-white text-black py-6 rounded-2xl font-black text-2xl uppercase hover:bg-indigo-600 hover:text-white transition-all shadow-2xl">Submit Brief</button>
+                    <button type="submit" class="submit-btn w-full bg-white text-black rounded-2xl font-black uppercase hover:bg-indigo-600 hover:text-white transition-all">Submit Brief</button>
                 </form>
 
-                <div class="mt-12 pt-10 border-t border-white/5 flex justify-center gap-20 text-center">
-                    <p class="footer-info font-black text-white tracking-tight">gorlevivekanand@webinoid.in</p>
-                    <p class="footer-info font-black text-white tracking-tight">+91 8143529847</p>
+                <div class="mt-12 pt-8 border-t border-white/5 flex justify-center gap-20 text-center">
+                    <p class="footer-info font-black text-white italic">gorlevivekanand@webinoid.in</p>
+                    <p class="footer-info font-black text-white italic">+91 8143529847</p>
                 </div>
             </div>
         </section>
