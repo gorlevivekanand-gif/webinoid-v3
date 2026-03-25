@@ -11,19 +11,22 @@
         .hero-title { line-height: 1.0; letter-spacing: -0.04em; text-transform: uppercase; }
         .glass-card { background: #0a0a0a; border: 1px solid #222; }
         
-        /* Desktop Refinements: Readability & Unified Scale */
+        /* Desktop: Maximize Clarity, Remove Redundancy */
         @media (min-width: 1024px) {
-            .section-desc { font-size: 1.5rem !important; color: #eee !important; } /* Larger & Brighter */
-            .contact-data { font-size: 1.75rem !important; } /* Unified Email/Phone Scale */
+            .section-desc { font-size: 1.6rem !important; color: #eee !important; margin-bottom: 0 !important; }
+            .hero-buttons { display: none !important; } /* Hidden on Desktop */
+            .contact-data { font-size: 1.75rem !important; }
+            .hero-section { padding-bottom: 4rem !important; }
         }
 
-        /* Mobile Refinements: Symmetry & Proportions */
+        /* Mobile: Retain Action & Symmetry */
         @media (max-width: 640px) {
             .hero-title { font-size: 12vw !important; }
-            .nav-btn { padding: 8px 16px !important; font-size: 0.8rem !important; height: fit-content; } /* Symmetry with Logo */
-            .section-heading { font-size: 2.5rem !important; } /* Reduced Let's Build size */
+            .nav-btn { padding: 8px 16px !important; font-size: 0.8rem !important; }
+            .section-heading { font-size: 2.5rem !important; }
             .email-display { font-size: 4.5vw !important; white-space: nowrap; }
             .phone-display { font-size: 1.5rem !important; margin-top: 1rem; }
+            .hero-buttons { display: flex !important; } /* Visible on Mobile */
         }
     </style>
 </head>
@@ -37,14 +40,15 @@
     </nav>
 
     <main class="max-w-6xl mx-auto px-6">
-        <section class="py-20 text-center">
+        <section class="hero-section py-20 text-center">
             <h1 class="hero-title text-7xl md:text-9xl font-black mb-8">THE FUTURE<br>OF SEARCH.</h1>
             <p class="section-desc text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
                 Architecting <span class="text-white font-extrabold">SGE-ready</span> systems specifically designed for the next generation of business.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#services" class="bg-indigo-600 text-white px-10 py-4 rounded-xl font-black text-lg">OUR EXPERTISE</a>
-                <a href="#contact" class="glass-card px-10 py-4 rounded-xl font-black text-lg">HIRE ME</a>
+            
+            <div class="hero-buttons flex-col sm:flex-row justify-center gap-4 mt-10 hidden">
+                <a href="#services" class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-black text-base">OUR EXPERTISE</a>
+                <a href="#contact" class="glass-card px-8 py-3 rounded-xl font-black text-base">HIRE ME</a>
             </div>
         </section>
 
