@@ -11,33 +11,31 @@
         .hero-title { line-height: 0.9; letter-spacing: -0.05em; text-transform: uppercase; }
         .glass-card { background: #0a0a0a; border: 1px solid #222; }
         
-        /* Desktop: Absolute Zero-Scroll Force */
+        /* Desktop: Full-Screen Fill, Zero-Scroll */
         @media (min-width: 1024px) {
             html, body { height: 100vh; overflow: hidden; }
             .main-content { 
-                height: 100vh; 
+                height: calc(100vh - 70px); 
                 display: flex; 
                 flex-direction: column; 
-                justify-content: space-between; 
-                padding-top: 2vh;
-                padding-bottom: 2vh;
+                justify-content: space-between; /* Fills the 60% void */
+                padding: 2vh 0; 
             }
-            .hero-title { font-size: 7.5vw !important; } /* Decreased size */
-            .section-desc { font-size: 1.25rem !important; margin-top: -1rem !important; } /* Tightened gap */
+            .hero-title { font-size: 8.5vw !important; } /* Restored massive scale */
+            .section-desc { font-size: 1.4rem !important; color: #eee !important; margin-top: -1.5rem; }
         }
 
-        /* Mobile Refinements */
+        /* Mobile Refinements: Standard Flow */
         @media (max-width: 640px) {
             .hero-title { font-size: 12vw !important; }
             .section-heading { font-size: 2.2rem !important; }
-            .email-display { font-size: 4.5vw !important; white-space: nowrap; }
             .nav-btn { padding: 6px 12px !important; font-size: 0.75rem !important; }
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="bg-black border-b border-white/10 px-6 py-3">
+    <nav class="bg-black border-b border-white/10 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-xl font-black italic tracking-tighter uppercase">WEBINOID<span class="text-indigo-500">.</span></a>
             <a href="#contact" class="bg-white text-black rounded-lg font-bold uppercase tracking-widest nav-btn px-4 py-2 text-[10px]">Connect</a>
@@ -46,42 +44,42 @@
 
     <main class="main-content max-w-6xl mx-auto px-6">
         <section class="text-center">
-            <h1 class="hero-title font-black mb-2">THE FUTURE<br>OF SEARCH.</h1>
+            <h1 class="hero-title font-black mb-4">THE FUTURE<br>OF SEARCH.</h1>
             <p class="section-desc text-gray-300 max-w-2xl mx-auto font-medium leading-tight">
-                Architecting <span class="text-white font-extrabold">SGE-ready</span> systems for the next generation.
+                Architecting <span class="text-white font-extrabold">SGE-ready</span> systems for the next generation of business.
             </p>
         </section>
 
-        <section id="services" class="grid md:grid-cols-3 gap-4">
-            <div class="glass-card p-5 rounded-[1.5rem] border-white/5">
-                <h3 class="text-indigo-500 font-black text-sm uppercase mb-1 italic">01. Architecture</h3>
-                <p class="text-gray-400 text-xs leading-tight">Elite engineering for high-velocity tech stacks.</p>
+        <section id="services" class="grid md:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-[2rem]">
+                <h3 class="text-indigo-500 font-black text-lg uppercase mb-2 italic">01. Architecture</h3>
+                <p class="text-gray-400 text-sm leading-snug">Elite engineering for high-velocity tech stacks and global deployment.</p>
             </div>
-            <div class="glass-card p-5 rounded-[1.5rem] border-white/5">
-                <h3 class="text-purple-500 font-black text-sm uppercase mb-1 italic">02. Intelligence</h3>
-                <p class="text-gray-400 text-xs leading-tight">SEO optimization for AI search citations.</p>
+            <div class="glass-card p-6 rounded-[2rem]">
+                <h3 class="text-purple-500 font-black text-lg uppercase mb-2 italic">02. Intelligence</h3>
+                <p class="text-gray-400 text-sm leading-snug">SGE SEO optimization ensuring your brand is the primary citation.</p>
             </div>
-            <div class="glass-card p-5 rounded-[1.5rem] border-white/5">
-                <h3 class="text-pink-500 font-black text-sm uppercase mb-1 italic">03. Automation</h3>
-                <p class="text-gray-400 text-xs leading-tight">AI agents to automate workflows and scale.</p>
+            <div class="glass-card p-6 rounded-[2rem]">
+                <h3 class="text-pink-500 font-black text-lg uppercase mb-2 italic">03. Automation</h3>
+                <p class="text-gray-400 text-sm leading-snug">Deploying AI agents to automate complex workflows and scale growth.</p>
             </div>
         </section>
 
         <section id="contact">
-            <div class="glass-card p-6 md:p-8 rounded-[2.5rem] border-indigo-500/20">
-                <h2 class="section-heading text-center text-3xl md:text-5xl font-black mb-4 uppercase">LET'S BUILD.</h2>
+            <div class="glass-card p-8 md:p-10 rounded-[3.5rem] border-indigo-500/20">
+                <h2 class="section-heading text-center text-4xl md:text-6xl font-black mb-6 uppercase">LET'S BUILD.</h2>
                 
                 <form action="https://formspree.io/f/xvzvpenb" method="POST" class="max-w-4xl mx-auto">
-                    <div class="grid md:grid-cols-3 gap-3 mb-3">
-                        <input type="text" name="name" placeholder="NAME" required class="bg-black border border-white/10 p-3 rounded-lg text-sm text-white outline-none focus:border-indigo-500">
-                        <input type="email" name="email" placeholder="EMAIL" required class="bg-black border border-white/10 p-3 rounded-lg text-sm text-white outline-none focus:border-indigo-500">
-                        <button type="submit" class="bg-white text-black py-3 rounded-lg font-black text-sm uppercase hover:bg-indigo-600 hover:text-white transition-all">Submit</button>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <input type="text" name="name" placeholder="NAME" required class="bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-indigo-500">
+                        <input type="email" name="email" placeholder="EMAIL" required class="bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-indigo-500">
                     </div>
-                    <textarea name="message" placeholder="BRIEF..." rows="2" required class="w-full bg-black border border-white/10 p-3 rounded-lg text-sm text-white outline-none focus:border-indigo-500"></textarea>
+                    <textarea name="message" placeholder="PROJECT BRIEF" rows="3" required class="w-full bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-indigo-500 mb-4"></textarea>
+                    <button type="submit" class="w-full bg-white text-black py-4 rounded-xl font-black text-lg uppercase hover:bg-indigo-600 hover:text-white transition-all">Submit Brief</button>
                 </form>
 
-                <div class="mt-4 pt-4 border-t border-white/5 flex flex-wrap justify-center gap-6 text-center">
-                    <p class="email-display font-black text-white text-sm">gorlevivekanand@webinoid.in</p>
+                <div class="mt-6 pt-6 border-t border-white/5 flex justify-center gap-12 text-center">
+                    <p class="font-black text-white text-sm">gorlevivekanand@webinoid.in</p>
                     <p class="font-black text-white text-sm">+91 8143529847</p>
                 </div>
             </div>
