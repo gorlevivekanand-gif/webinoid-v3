@@ -8,92 +8,94 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
-        .hero-title { line-height: 1.0; letter-spacing: -0.04em; text-transform: uppercase; }
+        .hero-title { line-height: 0.95; letter-spacing: -0.05em; text-transform: uppercase; }
         .glass-card { background: #0a0a0a; border: 1px solid #222; }
         
-        /* Desktop: Maximize Clarity, Remove Redundancy */
+        /* Desktop: Zero-Scroll Logic */
         @media (min-width: 1024px) {
-            .section-desc { font-size: 1.6rem !important; color: #eee !important; margin-bottom: 0 !important; }
-            .hero-buttons { display: none !important; } /* Hidden on Desktop */
-            .contact-data { font-size: 1.75rem !important; }
-            .hero-section { padding-bottom: 4rem !important; }
+            html, body { height: 100vh; overflow: hidden; } /* Force remove scroll */
+            .main-wrapper { 
+                height: calc(100vh - 80px); 
+                display: flex; 
+                flex-direction: column; 
+                justify-content: center; 
+            }
+            .section-desc { font-size: 1.4rem !important; color: #eee !important; margin-bottom: 2rem !important; }
+            .hero-buttons { display: none !important; }
+            .gap-fix { margin-bottom: 1.5rem !important; } /* Tightened gaps */
+            .contact-data { font-size: 1.5rem !important; }
         }
 
-        /* Mobile: Retain Action & Symmetry */
+        /* Mobile: Retain standard flow */
         @media (max-width: 640px) {
             .hero-title { font-size: 12vw !important; }
             .nav-btn { padding: 8px 16px !important; font-size: 0.8rem !important; }
             .section-heading { font-size: 2.5rem !important; }
             .email-display { font-size: 4.5vw !important; white-space: nowrap; }
-            .phone-display { font-size: 1.5rem !important; margin-top: 1rem; }
-            .hero-buttons { display: flex !important; } /* Visible on Mobile */
+            .hero-buttons { display: flex !important; margin-top: 2rem; }
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="sticky top-0 z-50 bg-black/95 border-b border-white/10 px-6 py-5">
+    <nav class="sticky top-0 z-50 bg-black border-b border-white/10 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-xl font-black italic tracking-tighter uppercase">WEBINOID<span class="text-indigo-500">.</span></a>
             <a href="#contact" class="bg-white text-black rounded-lg font-bold uppercase tracking-widest nav-btn hover:bg-indigo-600 hover:text-white transition-all">Connect</a>
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-6">
-        <section class="hero-section py-20 text-center">
-            <h1 class="hero-title text-7xl md:text-9xl font-black mb-8">THE FUTURE<br>OF SEARCH.</h1>
-            <p class="section-desc text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
-                Architecting <span class="text-white font-extrabold">SGE-ready</span> systems specifically designed for the next generation of business.
+    <main class="main-wrapper max-w-6xl mx-auto px-6">
+        <section class="text-center gap-fix">
+            <h1 class="hero-title text-7xl md:text-8xl lg:text-9xl font-black mb-4">THE FUTURE<br>OF SEARCH.</h1>
+            <p class="section-desc text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-medium leading-tight">
+                Architecting <span class="text-white font-extrabold">SGE-ready</span> systems for the next generation of business.
             </p>
             
-            <div class="hero-buttons flex-col sm:flex-row justify-center gap-4 mt-10 hidden">
+            <div class="hero-buttons flex-col sm:flex-row justify-center gap-4 hidden">
                 <a href="#services" class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-black text-base">OUR EXPERTISE</a>
                 <a href="#contact" class="glass-card px-8 py-3 rounded-xl font-black text-base">HIRE ME</a>
             </div>
         </section>
 
-        <section id="services" class="py-12 grid md:grid-cols-3 gap-6">
-            <div class="glass-card p-8 rounded-[2.5rem]">
-                <h3 class="text-indigo-500 font-black text-xl uppercase mb-3 italic">01. Architecture</h3>
-                <p class="text-gray-300 text-base leading-snug">Elite engineering for high-velocity tech stacks and global deployment.</p>
+        <section id="services" class="py-6 grid md:grid-cols-3 gap-4">
+            <div class="glass-card p-6 rounded-[2rem]">
+                <h3 class="text-indigo-500 font-black text-lg uppercase mb-2 italic">01. Architecture</h3>
+                <p class="text-gray-400 text-sm leading-snug">Elite engineering for high-velocity tech stacks and global deployment.</p>
             </div>
-            <div class="glass-card p-8 rounded-[2.5rem]">
-                <h3 class="text-purple-500 font-black text-xl uppercase mb-3 italic">02. Intelligence</h3>
-                <p class="text-gray-300 text-base leading-snug">SGE SEO optimization ensuring your brand is the primary citation in AI answers.</p>
+            <div class="glass-card p-6 rounded-[2rem]">
+                <h3 class="text-purple-500 font-black text-lg uppercase mb-2 italic">02. Intelligence</h3>
+                <p class="text-gray-400 text-sm leading-snug">SGE SEO optimization ensuring your brand is the primary citation in AI answers.</p>
             </div>
-            <div class="glass-card p-8 rounded-[2.5rem]">
-                <h3 class="text-pink-500 font-black text-xl uppercase mb-3 italic">03. Automation</h3>
-                <p class="text-gray-300 text-base leading-snug">Deploying AI agents to automate complex workflows and scale growth.</p>
+            <div class="glass-card p-6 rounded-[2rem]">
+                <h3 class="text-pink-500 font-black text-lg uppercase mb-2 italic">03. Automation</h3>
+                <p class="text-gray-400 text-sm leading-snug">Deploying AI agents to automate complex workflows and scale growth.</p>
             </div>
         </section>
 
-        <section id="contact" class="py-24">
-            <div class="glass-card p-10 md:p-20 rounded-[4rem] border-indigo-500/30 text-center">
-                <h2 class="section-heading text-5xl md:text-7xl font-black mb-6 uppercase">LET'S BUILD.</h2>
-                <p class="text-white text-lg font-bold mb-12">Partner with Gorle Vivekanand.</p>
+        <section id="contact" class="py-6 lg:py-10">
+            <div class="glass-card p-8 md:p-12 rounded-[3rem] border-indigo-500/20 text-center">
+                <h2 class="section-heading text-4xl md:text-6xl font-black mb-2 uppercase">LET'S BUILD.</h2>
+                <p class="text-white text-base font-bold mb-6">Partner with Gorle Vivekanand.</p>
 
-                <form action="https://formspree.io/f/xvzvpenb" method="POST" class="space-y-4 mb-16 max-w-2xl mx-auto text-left">
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <input type="text" name="name" placeholder="NAME" required class="w-full bg-black border border-white/20 p-5 rounded-xl text-white outline-none focus:border-indigo-500">
-                        <input type="email" name="email" placeholder="EMAIL" required class="w-full bg-black border border-white/20 p-5 rounded-xl text-white outline-none focus:border-indigo-500">
-                    </div>
-                    <textarea name="message" placeholder="PROJECT BRIEF" rows="4" required class="w-full bg-black border border-white/20 p-5 rounded-xl text-white outline-none focus:border-indigo-500"></textarea>
-                    <button type="submit" class="w-full bg-white text-black py-5 rounded-xl font-black text-xl uppercase hover:bg-indigo-600 hover:text-white transition-all">Submit Brief</button>
-                </form>
-
-                <div class="pt-10 border-t border-white/10">
-                    <p class="text-indigo-400 font-black uppercase text-[10px] tracking-widest mb-6">Direct Channel</p>
-                    <div class="flex flex-col items-center">
-                        <p class="email-display contact-data font-black text-white">gorlevivekanand@webinoid.in</p>
-                        <p class="phone-display contact-data font-black text-white">+91 8143529847</p>
+                <div class="pt-6 border-t border-white/10">
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12">
+                        <div>
+                            <p class="text-indigo-400 font-black uppercase text-[10px] tracking-widest mb-1">Email</p>
+                            <p class="email-display contact-data font-black text-white">gorlevivekanand@webinoid.in</p>
+                        </div>
+                        <div>
+                            <p class="text-indigo-400 font-black uppercase text-[10px] tracking-widest mb-1">Phone</p>
+                            <p class="contact-data font-black text-white">+91 8143529847</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-12 text-center text-[10px] text-gray-800 font-bold uppercase tracking-[1em] opacity-40">
-        &copy; 2026 WEBINOID DIGITAL STRATEGY
+    <footer class="hidden md:block py-4 text-center text-[8px] text-gray-800 font-bold uppercase tracking-[1em] opacity-30">
+        &copy; 2026 WEBINOID
     </footer>
 
 </body>
