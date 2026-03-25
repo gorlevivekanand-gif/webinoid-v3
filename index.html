@@ -8,79 +8,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
-        .hero-title { line-height: 0.9; letter-spacing: -0.05em; text-transform: uppercase; }
+        .hero-title { line-height: 0.85; letter-spacing: -0.05em; text-transform: uppercase; }
         .glass-card { background: #0a0a0a; border: 1px solid #222; }
         
-        /* Desktop: Full-Screen Fill, Zero-Scroll */
+        /* Desktop: Full-Screen Expansion, Zero-Scroll */
         @media (min-width: 1024px) {
             html, body { height: 100vh; overflow: hidden; }
             .main-content { 
-                height: calc(100vh - 70px); 
+                height: calc(100vh - 80px); 
                 display: flex; 
                 flex-direction: column; 
-                justify-content: space-between; /* Fills the 60% void */
-                padding: 2vh 0; 
+                justify-content: space-around; /* Dynamically spreads content to fill the void */
+                padding: 3vh 0; 
             }
-            .hero-title { font-size: 8.5vw !important; } /* Restored massive scale */
-            .section-desc { font-size: 1.4rem !important; color: #eee !important; margin-top: -1.5rem; }
+            .hero-title { font-size: 10vw !important; } /* Restored massive presence */
+            .section-desc { font-size: 1.6rem !important; color: #eee !important; margin-top: 1rem; }
+            .contact-card { padding: 4vh 5vw !important; }
         }
 
-        /* Mobile Refinements: Standard Flow */
+        /* Mobile: Retains your preferred balance */
         @media (max-width: 640px) {
             .hero-title { font-size: 12vw !important; }
-            .section-heading { font-size: 2.2rem !important; }
-            .nav-btn { padding: 6px 12px !important; font-size: 0.75rem !important; }
+            .section-heading { font-size: 2.5rem !important; }
+            .nav-btn { padding: 8px 16px !important; font-size: 0.8rem !important; }
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="bg-black border-b border-white/10 px-6 py-4">
+    <nav class="bg-black border-b border-white/10 px-6 py-5">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl font-black italic tracking-tighter uppercase">WEBINOID<span class="text-indigo-500">.</span></a>
-            <a href="#contact" class="bg-white text-black rounded-lg font-bold uppercase tracking-widest nav-btn px-4 py-2 text-[10px]">Connect</a>
+            <a href="index.html" class="text-2xl font-black italic tracking-tighter uppercase">WEBINOID<span class="text-indigo-500">.</span></a>
+            <a href="#contact" class="bg-white text-black rounded-lg font-bold uppercase tracking-widest nav-btn px-5 py-2 text-[11px]">Connect</a>
         </div>
     </nav>
 
-    <main class="main-content max-w-6xl mx-auto px-6">
+    <main class="main-content max-w-7xl mx-auto px-10">
         <section class="text-center">
-            <h1 class="hero-title font-black mb-4">THE FUTURE<br>OF SEARCH.</h1>
-            <p class="section-desc text-gray-300 max-w-2xl mx-auto font-medium leading-tight">
+            <h1 class="hero-title font-black mb-6">THE FUTURE<br>OF SEARCH.</h1>
+            <p class="section-desc text-gray-300 max-w-3xl mx-auto font-medium leading-tight">
                 Architecting <span class="text-white font-extrabold">SGE-ready</span> systems for the next generation of business.
             </p>
         </section>
 
-        <section id="services" class="grid md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 rounded-[2rem]">
-                <h3 class="text-indigo-500 font-black text-lg uppercase mb-2 italic">01. Architecture</h3>
-                <p class="text-gray-400 text-sm leading-snug">Elite engineering for high-velocity tech stacks and global deployment.</p>
+        <section id="services" class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-10 rounded-[2.5rem] border-white/5">
+                <h3 class="text-indigo-500 font-black text-xl uppercase mb-3 italic">01. Architecture</h3>
+                <p class="text-gray-300 text-sm leading-snug">Elite engineering for high-velocity tech stacks and global deployment.</p>
             </div>
-            <div class="glass-card p-6 rounded-[2rem]">
-                <h3 class="text-purple-500 font-black text-lg uppercase mb-2 italic">02. Intelligence</h3>
-                <p class="text-gray-400 text-sm leading-snug">SGE SEO optimization ensuring your brand is the primary citation.</p>
+            <div class="glass-card p-10 rounded-[2.5rem] border-white/5">
+                <h3 class="text-purple-500 font-black text-xl uppercase mb-3 italic">02. Intelligence</h3>
+                <p class="text-gray-300 text-sm leading-snug">SGE SEO optimization ensuring your brand is the primary citation.</p>
             </div>
-            <div class="glass-card p-6 rounded-[2rem]">
-                <h3 class="text-pink-500 font-black text-lg uppercase mb-2 italic">03. Automation</h3>
-                <p class="text-gray-400 text-sm leading-snug">Deploying AI agents to automate complex workflows and scale growth.</p>
+            <div class="glass-card p-10 rounded-[2.5rem] border-white/5">
+                <h3 class="text-pink-500 font-black text-xl uppercase mb-3 italic">03. Automation</h3>
+                <p class="text-gray-300 text-sm leading-snug">Deploying AI agents to automate complex workflows and scale growth.</p>
             </div>
         </section>
 
         <section id="contact">
-            <div class="glass-card p-8 md:p-10 rounded-[3.5rem] border-indigo-500/20">
-                <h2 class="section-heading text-center text-4xl md:text-6xl font-black mb-6 uppercase">LET'S BUILD.</h2>
+            <div class="glass-card contact-card p-10 md:p-14 rounded-[4rem] border-indigo-500/20">
+                <h2 class="section-heading text-center text-5xl md:text-7xl font-black mb-8 uppercase">LET'S BUILD.</h2>
                 
-                <form action="https://formspree.io/f/xvzvpenb" method="POST" class="max-w-4xl mx-auto">
-                    <div class="grid md:grid-cols-2 gap-4 mb-4">
-                        <input type="text" name="name" placeholder="NAME" required class="bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-indigo-500">
-                        <input type="email" name="email" placeholder="EMAIL" required class="bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-indigo-500">
+                <form action="https://formspree.io/f/xvzvpenb" method="POST" class="max-w-5xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" name="name" placeholder="NAME" required class="bg-black border border-white/10 p-5 rounded-2xl text-lg text-white outline-none focus:border-indigo-500 transition-all">
+                        <input type="email" name="email" placeholder="EMAIL" required class="bg-black border border-white/10 p-5 rounded-2xl text-lg text-white outline-none focus:border-indigo-500 transition-all">
                     </div>
-                    <textarea name="message" placeholder="PROJECT BRIEF" rows="3" required class="w-full bg-black border border-white/10 p-4 rounded-xl text-white outline-none focus:border-indigo-500 mb-4"></textarea>
-                    <button type="submit" class="w-full bg-white text-black py-4 rounded-xl font-black text-lg uppercase hover:bg-indigo-600 hover:text-white transition-all">Submit Brief</button>
+                    <textarea name="message" placeholder="PROJECT BRIEF" rows="3" required class="w-full bg-black border border-white/10 p-5 rounded-2xl text-lg text-white outline-none focus:border-indigo-500 mb-6 transition-all"></textarea>
+                    <button type="submit" class="w-full bg-white text-black py-5 rounded-2xl font-black text-xl uppercase hover:bg-indigo-600 hover:text-white transition-all shadow-xl shadow-white/5">Submit Brief</button>
                 </form>
 
-                <div class="mt-6 pt-6 border-t border-white/5 flex justify-center gap-12 text-center">
-                    <p class="font-black text-white text-sm">gorlevivekanand@webinoid.in</p>
-                    <p class="font-black text-white text-sm">+91 8143529847</p>
+                <div class="mt-10 pt-8 border-t border-white/5 flex justify-center gap-16 text-center">
+                    <p class="font-black text-white text-lg tracking-tight">gorlevivekanand@webinoid.in</p>
+                    <p class="font-black text-white text-lg tracking-tight">+91 8143529847</p>
                 </div>
             </div>
         </section>
