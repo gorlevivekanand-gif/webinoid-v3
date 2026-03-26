@@ -6,49 +6,58 @@
     <title>Webinoid | AI Strategy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: sans-serif; }
-        /* The "Bento" Tile Style */
-        .bento-tile { background: #111; border: 1px solid #222; border-radius: 1.5rem; padding: 2rem; }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        .border-thin { border: 1px solid rgba(255,255,255,0.1); }
+        input, textarea { background: transparent !important; border: 1px solid rgba(255,255,255,0.2) !important; transition: border 0.3s; }
+        input:focus { border-color: #fff !important; }
     </style>
 </head>
-<body class="p-4 md:p-12">
+<body class="antialiased selection:bg-white selection:text-black">
 
-    <header class="mb-8">
-        <h1 class="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold mb-2">Webinoid Agency</h1>
-        <p class="text-4xl font-bold leading-tight">Architecting the <span class="text-indigo-500">future of search.</span></p>
+    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto uppercase tracking-widest text-[10px] font-bold">
+        <span>Webinoid © 2026</span>
+        <a href="#contact" class="hover:opacity-50 transition-opacity">Contact</a>
+    </nav>
+
+    <header class="px-8 py-20 md:py-40 max-w-6xl mx-auto border-thin border-x-0">
+        <h1 class="text-5xl md:text-[120px] font-black leading-[0.9] tracking-tighter uppercase mb-12">
+            AI <br> Strategy.
+        </h1>
+        <p class="text-xl md:text-3xl font-medium max-w-2xl leading-tight text-gray-400">
+            We build the frameworks that define how users find you in the age of generative search.
+        </p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        
-        <div class="bento-tile md:col-span-2 flex flex-col justify-end min-h-[300px] bg-gradient-to-br from-indigo-900/20 to-transparent">
-            <h2 class="text-2xl font-bold mb-2">SGE Strategy</h2>
-            <p class="text-gray-400">Optimizing your brand to be the primary citation in AI-generated search results.</p>
+    <section class="max-w-6xl mx-auto border-thin border-t-0 border-x-0">
+        <div class="grid md:grid-cols-2">
+            <div class="p-8 border-thin border-l-0 border-t-0">
+                <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600">01 / Services</span>
+                <h3 class="text-2xl font-bold mt-4 uppercase">SGE Architecture</h3>
+                <p class="mt-4 text-gray-500 text-sm leading-relaxed">Optimization for Google's Search Generative Experience. Ensuring your brand is the primary source of truth for AI crawlers.</p>
+            </div>
+            <div class="p-8 border-thin border-l-0 border-t-0 md:border-r-0">
+                <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600">02 / Services</span>
+                <h3 class="text-2xl font-bold mt-4 uppercase">AI Orchestration</h3>
+                <p class="mt-4 text-gray-500 text-sm leading-relaxed">Automated workflows and custom agent deployment for high-velocity software agencies.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="bento-tile flex flex-col justify-center border-indigo-500/30">
-            <h2 class="text-xl font-bold">100%</h2>
-            <p class="text-sm text-gray-500 uppercase tracking-widest">AI Native</p>
-        </div>
-
-        <div class="bento-tile">
-            <h3 class="font-bold mb-2 uppercase text-xs text-indigo-400 tracking-widest">Architecture</h3>
-            <p class="text-sm text-gray-400">Scalable tech stacks built for high-velocity AI deployment.</p>
-        </div>
-
-        <div class="bento-tile md:col-span-2">
-            <h2 class="text-xl font-bold mb-4">Let's Build.</h2>
-            <form action="https://formspree.io/f/xvzvpenb" method="POST" class="flex flex-col gap-3">
-                <input type="email" name="email" placeholder="Email Address" class="bg-black border border-white/10 p-3 rounded-xl outline-none focus:border-indigo-500 text-sm">
-                <button class="bg-white text-black font-bold p-3 rounded-xl text-sm uppercase">Submit Brief</button>
+    <section id="contact" class="px-8 py-20 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-4xl font-black uppercase tracking-tighter">Let's <br> Build.</h2>
+                <p class="mt-4 text-gray-500">Submit your brief and we will reach out within 24 hours.</p>
+            </div>
+            <form action="https://formspree.io/f/xvzvpenb" method="POST" class="space-y-6">
+                <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="w-full p-6 text-sm uppercase tracking-widest outline-none">
+                <textarea name="message" placeholder="TELL US ABOUT THE PROJECT" rows="4" class="w-full p-6 text-sm uppercase tracking-widest outline-none"></textarea>
+                <button type="submit" class="w-full bg-white text-black font-black p-6 uppercase tracking-[0.2em] text-xs hover:bg-gray-200 transition-colors">
+                    Send Message
+                </button>
             </form>
         </div>
-
-    </div>
-
-    <footer class="mt-8 pt-8 border-t border-white/5 flex flex-col gap-2">
-        <p class="text-xs text-gray-600">gorlevivekanand@webinoid.in</p>
-        <p class="text-xs text-gray-600">+91 8143529847</p>
-    </footer>
+    </section>
 
 </body>
 </html>
