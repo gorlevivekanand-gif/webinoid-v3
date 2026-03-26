@@ -5,104 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webinoid | AI Strategy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; margin: 0; overflow-y: auto; }
-        .hero-title { line-height: 0.85; letter-spacing: -0.05em; text-transform: uppercase; }
-        .glass-card { background: #0a0a0a; border: 1px solid #222; }
-        
-        @media (min-width: 1024px) {
-            .main-content { 
-                display: flex; 
-                flex-direction: column; 
-                gap: 8vh; /* Tightened Section Gaps */
-                padding: 10vh 8vw; 
-                max-width: 1900px;
-                margin: 0 auto;
-            }
-
-            /* Main Headlines */
-            .hero-title { font-size: 6.0vw !important; } 
-            .form-heading { font-size: 5.5vw !important; margin-bottom: 4rem; line-height: 1; } 
-
-            /* Descriptions & Service Text */
-            .hero-desc { font-size: 3.8rem !important; margin-top: 3rem; line-height: 1.1; color: #f9fafb; letter-spacing: -0.02em; }
-            .service-title { font-size: 3.3rem !important; margin-bottom: 1.5rem; } 
-            .service-text { font-size: 2.5rem !important; line-height: 1.4; color: #9ca3af; }
-
-            /* Form & Interface */
-            .input-field { font-size: 2.5rem !important; padding: 2.5rem !important; }
-            .submit-btn { font-size: 2.2rem !important; padding: 2.2rem !important; margin-top: 3rem; }
-
-            /* Contact & Brand */
-            .footer-info { font-size: 3.2rem !important; font-weight: 900; color: #fff; letter-spacing: -0.04em; }
-            .nav-logo { font-size: 1.875rem !important; }
-            
-            /* Tightened Container Spacing */
-            .service-grid { gap: 4rem !important; }
-            .service-card { padding: 4rem !important; border-radius: 4rem; }
-            .contact-card { padding: 6rem !important; border-radius: 6rem; }
-        }
-
-        @media (max-width: 1023px) {
-            .main-content { padding: 40px 20px; gap: 50px; }
-            .hero-title { font-size: 13vw !important; }
-            .form-heading { font-size: 11vw !important; }
-        }
+        body { background-color: #050505; color: #ffffff; font-family: sans-serif; }
+        /* The "Bento" Tile Style */
+        .bento-tile { background: #111; border: 1px solid #222; border-radius: 1.5rem; padding: 2rem; }
     </style>
 </head>
-<body class="antialiased">
+<body class="p-4 md:p-12">
 
-    <nav class="bg-black border-b border-white/10 px-12 py-8 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="nav-logo font-black italic tracking-tighter uppercase">WEBINOID<span class="text-indigo-500">.</span></a>
-            <a href="#contact" class="bg-white text-black rounded-2xl font-bold uppercase tracking-widest px-12 py-5 text-sm">Connect</a>
+    <header class="mb-8">
+        <h1 class="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold mb-2">Webinoid Agency</h1>
+        <p class="text-4xl font-bold leading-tight">Architecting the <span class="text-indigo-500">future of search.</span></p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <div class="bento-tile md:col-span-2 flex flex-col justify-end min-h-[300px] bg-gradient-to-br from-indigo-900/20 to-transparent">
+            <h2 class="text-2xl font-bold mb-2">SGE Strategy</h2>
+            <p class="text-gray-400">Optimizing your brand to be the primary citation in AI-generated search results.</p>
         </div>
-    </nav>
 
-    <main class="main-content">
-        <section class="text-center">
-            <h1 class="hero-title font-black">THE FUTURE<br>OF SEARCH.</h1>
-            <p class="hero-desc font-medium max-w-7xl mx-auto">
-                Architecting <span class="text-white font-extrabold text-indigo-400">SGE-ready</span> systems for the next generation.
-            </p>
-        </section>
+        <div class="bento-tile flex flex-col justify-center border-indigo-500/30">
+            <h2 class="text-xl font-bold">100%</h2>
+            <p class="text-sm text-gray-500 uppercase tracking-widest">AI Native</p>
+        </div>
 
-        <section id="services" class="service-grid grid md:grid-cols-3">
-            <div class="glass-card service-card border-white/5">
-                <h3 class="service-title text-indigo-500 font-black uppercase italic">01. Architecture</h3>
-                <p class="service-text">Elite engineering for high-velocity tech stacks and global deployment.</p>
-            </div>
-            <div class="glass-card service-card border-white/5">
-                <h3 class="service-title text-purple-500 font-black uppercase italic">02. Intelligence</h3>
-                <p class="service-text">SGE SEO optimization ensuring your brand is the primary citation.</p>
-            </div>
-            <div class="glass-card service-card border-white/5">
-                <h3 class="service-title text-pink-500 font-black uppercase italic">03. Automation</h3>
-                <p class="service-text">Deploying AI agents to automate complex workflows and scale growth.</p>
-            </div>
-        </section>
+        <div class="bento-tile">
+            <h3 class="font-bold mb-2 uppercase text-xs text-indigo-400 tracking-widest">Architecture</h3>
+            <p class="text-sm text-gray-400">Scalable tech stacks built for high-velocity AI deployment.</p>
+        </div>
 
-        <section id="contact" class="pb-32">
-            <div class="glass-card contact-card border-indigo-500/20">
-                <h2 class="form-heading text-center font-black uppercase">LET'S BUILD.</h2>
-                
-                <form action="https://formspree.io/f/xvzvpenb" method="POST" class="max-w-7xl mx-auto">
-                    <div class="grid md:grid-cols-2 gap-12 mb-12">
-                        <input type="text" name="name" placeholder="NAME" required class="input-field bg-black border border-white/10 rounded-[2.5rem] text-white outline-none focus:border-indigo-500">
-                        <input type="email" name="email" placeholder="EMAIL" required class="input-field bg-black border border-white/10 rounded-[2.5rem] text-white outline-none focus:border-indigo-500">
-                    </div>
-                    <textarea name="message" placeholder="PROJECT BRIEF" rows="3" required class="input-field w-full bg-black border border-white/10 rounded-[2.5rem] text-white outline-none focus:border-indigo-500 mb-12"></textarea>
-                    <button type="submit" class="submit-btn w-full bg-white text-black rounded-[2.5rem] font-black uppercase hover:bg-indigo-600 hover:text-white transition-all shadow-2xl">Submit Brief</button>
-                </form>
+        <div class="bento-tile md:col-span-2">
+            <h2 class="text-xl font-bold mb-4">Let's Build.</h2>
+            <form action="https://formspree.io/f/xvzvpenb" method="POST" class="flex flex-col gap-3">
+                <input type="email" name="email" placeholder="Email Address" class="bg-black border border-white/10 p-3 rounded-xl outline-none focus:border-indigo-500 text-sm">
+                <button class="bg-white text-black font-bold p-3 rounded-xl text-sm uppercase">Submit Brief</button>
+            </form>
+        </div>
 
-                <div class="mt-24 pt-16 border-t border-white/5 flex flex-wrap justify-center gap-32 text-center">
-                    <p class="footer-info italic">gorlevivekanand@webinoid.in</p>
-                    <p class="footer-info italic">+91 8143529847</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    </div>
+
+    <footer class="mt-8 pt-8 border-t border-white/5 flex flex-col gap-2">
+        <p class="text-xs text-gray-600">gorlevivekanand@webinoid.in</p>
+        <p class="text-xs text-gray-600">+91 8143529847</p>
+    </footer>
 
 </body>
 </html>
