@@ -3,110 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBINOID | SGE Systems & AI Strategy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000000; letter-spacing: -0.02em; }
-        .hero-title { font-size: clamp(3rem, 10vw, 8rem); line-height: 0.85; font-weight: 900; text-transform: uppercase; }
-        .content-section { border-top: 1px solid #e5e7eb; padding: 80px 0; }
-        .pillar-card { border-left: 1px solid #e5e7eb; padding: 40px; transition: background 0.3s; }
-        .pillar-card:hover { background: #fafafa; }
-        .btn-black { background: #000; color: #fff; padding: 20px 40px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; transition: 0.3s; }
-        .btn-black:hover { opacity: 0.8; transform: translateY(-2px); }
-    </style>
+    <title>Webinoid | Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased">
+<body>
 
-    <nav class="flex justify-between items-center px-8 py-10 max-w-7xl mx-auto">
-        <div class="text-2xl font-black tracking-tighter">WEBINOID</div>
-        <button onclick="toggleModal()" class="text-xs font-bold tracking-widest border-b-2 border-black pb-1 hover:opacity-50 transition">BOOK STRATEGY CALL</button>
-    </nav>
-
-    <header class="px-8 max-w-7xl mx-auto pb-32">
-        <p class="text-xs font-bold tracking-[0.4em] text-zinc-400 mb-8 uppercase">The Future of Search</p>
-        <h1 class="hero-title mb-16">
-            SGE-READY<br>TECH STACKS.
-        </h1>
-        <div class="grid md:grid-cols-2 gap-12">
-            <p class="text-2xl leading-tight text-zinc-600 font-light">
-                We build the <span class="text-black font-bold">intelligence layer</span> for companies ready to lead the next industrial revolution. Elite engineering meets generative strategy.
-            </p>
-            <div class="flex flex-col items-start justify-end">
-                <button onclick="toggleModal()" class="btn-black text-sm">Start Your Transition —></button>
-            </div>
-        </div>
+    <header>
+        <nav class="container">
+            <div class="logo">WEBINOID</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn-nav">Get Started</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="content-section px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-xs font-black tracking-[0.4em] mb-20 uppercase">Core Pillars of Intelligence</h2>
-            <div class="grid md:grid-cols-3">
-                
-                <div class="pillar-card border-t md:border-t-0">
-                    <span class="text-xs font-bold text-zinc-400 uppercase">Pillar 01</span>
-                    <h3 class="text-4xl font-black my-6 uppercase">Architecture</h3>
-                    <p class="text-zinc-500 leading-relaxed mb-8">
-                        Elite engineering for high-velocity tech stacks. We build the scalable foundation your mobile and web applications need to survive the AI shift.
-                    </p>
-                    <span class="text-[10px] font-bold tracking-widest uppercase py-1 px-2 bg-zinc-100">Engineering Excellence</span>
-                </div>
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Elevate Your Digital Presence</h1>
+            <p>Creating high-performance websites and digital solutions tailored for your business growth.</p>
+            <a href="#services" class="btn-primary">Explore My Services</a>
+        </div>
+    </section>
 
-                <div class="pillar-card">
-                    <span class="text-xs font-bold text-zinc-400 uppercase">Pillar 02</span>
-                    <h3 class="text-4xl font-black my-6 uppercase">Intelligence</h3>
-                    <p class="text-zinc-500 leading-relaxed mb-8">
-                        SGE SEO and LLM Optimization. We ensure your business is the definitive answer in the new generative search landscape.
-                    </p>
-                    <span class="text-[10px] font-bold tracking-widest uppercase py-1 px-2 bg-zinc-100">Search Strategy</span>
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Custom-built, responsive websites designed to convert visitors into customers.</p>
                 </div>
-
-                <div class="pillar-card">
-                    <span class="text-xs font-bold text-zinc-400 uppercase">Pillar 03</span>
-                    <h3 class="text-4xl font-black my-6 uppercase">Automation</h3>
-                    <p class="text-zinc-500 leading-relaxed mb-8">
-                        Deploying custom AI agents that automate complex workflows, reducing operational friction while increasing lead quality.
-                    </p>
-                    <span class="text-[10px] font-bold tracking-widest uppercase py-1 px-2 bg-zinc-100">AI Agent Deployment</span>
+                <div class="service-card">
+                    <div class="icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful and intuitive user interfaces that provide seamless user experiences.</p>
                 </div>
-
+                <div class="service-card">
+                    <div class="icon">📈</div>
+                    <h3>SEO Optimization</h3>
+                    <p>Boosting your search rankings to ensure your brand gets the visibility it deserves.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="content-section bg-zinc-50 px-8">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
-            <div>
-                <h2 class="text-6xl font-black uppercase tracking-tighter mb-8 leading-none">Execution<br>Partner.</h2>
-                <p class="text-xl text-zinc-500 leading-relaxed">
-                    We don't just consult; we execute. For selected partners, Webinoid functions as a fractional AI CTO, taking full responsibility for your digital roadmap and tech deployment.
-                </p>
+    <section id="about" class="about">
+        <div class="container about-flex">
+            <div class="about-text">
+                <h2>About Webinoid</h2>
+                <p>We specialize in helping small to medium-sized businesses establish a professional online presence. Our approach combines creative design with technical excellence.</p>
             </div>
-            <div class="border-2 border-black p-12 flex flex-col justify-between">
-                <div>
-                    <h4 class="text-xs font-bold tracking-[0.3em] uppercase mb-4">The Partnership Model</h4>
-                    <p class="text-4xl font-black">₹1.75L</p>
-                    <p class="text-zinc-400 mt-2 font-medium">Initial Activation Fee</p>
-                </div>
-                <button onclick="toggleModal()" class="btn-black w-full mt-10">Request Strategy Session</button>
+            <div class="about-image">
+                <div class="placeholder-img">Your Image Here</div>
             </div>
         </div>
     </section>
 
-    <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-6 bg-white/95 backdrop-blur-xl">
-        <div class="w-full max-w-4xl relative">
-            <button onclick="toggleModal()" class="absolute -top-10 right-0 text-black font-bold uppercase text-xs tracking-widest">[ Close ]</button>
-            <div class="calendly-inline-widget" data-url="YOUR_LINK" style="min-width:320px;height:650px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let’s Work Together</h2>
+            <p>Ready to start your project? Drop a message below.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Tell me about your project" rows="5"></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
         </div>
-    </div>
+    </section>
 
-    <script>
-        function toggleModal() {
-            const modal = document.getElementById('bookingModal');
-            modal.classList.toggle('hidden');
-            document.body.style.overflow = modal.classList.contains('hidden') ? 'auto' : 'hidden';
-        }
-    </script>
+    <footer>
+        <p>&copy; 2024 Webinoid. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
