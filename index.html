@@ -6,58 +6,67 @@
     <title>Webinoid | AI Strategy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
-        .border-thin { border: 1px solid rgba(255,255,255,0.1); }
-        input, textarea { background: transparent !important; border: 1px solid rgba(255,255,255,0.2) !important; transition: border 0.3s; }
-        input:focus { border-color: #fff !important; }
+        /* UI Reviewer Fix: Avoid pure black/white to prevent eye strain */
+        body { background-color: #080808; color: #ececec; font-family: 'Inter', system-ui, sans-serif; }
+        .border-subtle { border-color: rgba(255,255,255,0.08); }
+        
+        /* Smooth interactions for mobile touch */
+        .tap-active:active { background-color: #ffffff; color: #000; transition: 0.1s; }
+        input:focus { border-color: rgba(255,255,255,0.5) !important; outline: none; }
     </style>
 </head>
-<body class="antialiased selection:bg-white selection:text-black">
+<body class="antialiased">
 
-    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto uppercase tracking-widest text-[10px] font-bold">
-        <span>Webinoid © 2026</span>
-        <a href="#contact" class="hover:opacity-50 transition-opacity">Contact</a>
+    <nav class="p-6 md:p-10 flex justify-between items-center max-w-7xl mx-auto uppercase tracking-[0.2em] text-[10px] font-bold opacity-60">
+        <span>Webinoid Agency</span>
+        <span>© 2026</span>
     </nav>
 
-    <header class="px-8 py-20 md:py-40 max-w-6xl mx-auto border-thin border-x-0">
-        <h1 class="text-5xl md:text-[120px] font-black leading-[0.9] tracking-tighter uppercase mb-12">
-            AI <br> Strategy.
+    <header class="px-6 pt-24 pb-16 md:pt-40 md:pb-32 max-w-7xl mx-auto border-t border-subtle">
+        <h1 class="text-6xl md:text-[140px] font-black leading-[0.85] tracking-tighter uppercase mb-10">
+            AI<br>Strategy.
         </h1>
-        <p class="text-xl md:text-3xl font-medium max-w-2xl leading-tight text-gray-400">
-            We build the frameworks that define how users find you in the age of generative search.
+        <p class="text-lg md:text-2xl font-medium max-w-xl leading-snug text-gray-500">
+            We architect SGE-first frameworks for the next generation of search.
         </p>
     </header>
 
-    <section class="max-w-6xl mx-auto border-thin border-t-0 border-x-0">
+    <section class="max-w-7xl mx-auto border-y border-subtle">
         <div class="grid md:grid-cols-2">
-            <div class="p-8 border-thin border-l-0 border-t-0">
-                <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600">01 / Services</span>
-                <h3 class="text-2xl font-bold mt-4 uppercase">SGE Architecture</h3>
-                <p class="mt-4 text-gray-500 text-sm leading-relaxed">Optimization for Google's Search Generative Experience. Ensuring your brand is the primary source of truth for AI crawlers.</p>
+            <div class="p-10 border-b md:border-b-0 md:border-r border-subtle">
+                <span class="text-[9px] font-black uppercase tracking-[0.4em] text-indigo-500">Expertise 01</span>
+                <h3 class="text-xl font-bold mt-6 uppercase tracking-tight">SGE Architecture</h3>
+                <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-sm">Strategic optimization for Search Generative Experience. We ensure your brand is the primary citation for AI agents.</p>
             </div>
-            <div class="p-8 border-thin border-l-0 border-t-0 md:border-r-0">
-                <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600">02 / Services</span>
-                <h3 class="text-2xl font-bold mt-4 uppercase">AI Orchestration</h3>
-                <p class="mt-4 text-gray-500 text-sm leading-relaxed">Automated workflows and custom agent deployment for high-velocity software agencies.</p>
+            <div class="p-10">
+                <span class="text-[9px] font-black uppercase tracking-[0.4em] text-purple-500">Expertise 02</span>
+                <h3 class="text-xl font-bold mt-6 uppercase tracking-tight">Digital Systems</h3>
+                <p class="mt-4 text-gray-500 text-sm leading-relaxed max-w-sm">High-velocity tech stacks and automated workflows designed for specialized software agencies.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="px-8 py-20 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-4xl font-black uppercase tracking-tighter">Let's <br> Build.</h2>
-                <p class="mt-4 text-gray-500">Submit your brief and we will reach out within 24 hours.</p>
+    <section id="contact" class="px-6 py-24 md:py-40 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-5">
+                <h2 class="text-4xl font-black uppercase tracking-tighter">Let's Build.</h2>
+                <p class="mt-4 text-gray-500 text-sm uppercase tracking-widest">Connect with our consultants.</p>
             </div>
-            <form action="https://formspree.io/f/xvzvpenb" method="POST" class="space-y-6">
-                <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="w-full p-6 text-sm uppercase tracking-widest outline-none">
-                <textarea name="message" placeholder="TELL US ABOUT THE PROJECT" rows="4" class="w-full p-6 text-sm uppercase tracking-widest outline-none"></textarea>
-                <button type="submit" class="w-full bg-white text-black font-black p-6 uppercase tracking-[0.2em] text-xs hover:bg-gray-200 transition-colors">
-                    Send Message
-                </button>
+            <form action="https://formspree.io/f/xvzvpenb" method="POST" class="md:col-span-7 space-y-0">
+                <input type="email" name="email" placeholder="YOUR EMAIL" required class="w-full bg-transparent border-x-0 border-t-0 border-b border-subtle p-6 text-xs tracking-widest uppercase focus:border-white transition-all">
+                <textarea name="message" placeholder="PROJECT BRIEF" rows="3" class="w-full bg-transparent border-x-0 border-t-0 border-b border-subtle p-6 text-xs tracking-widest uppercase focus:border-white transition-all"></textarea>
+                <div class="pt-10">
+                    <button type="submit" class="tap-active w-full md:w-auto border border-white px-12 py-5 text-[10px] font-black uppercase tracking-[0.3em] transition-all">
+                        Initiate Brief
+                    </button>
+                </div>
             </form>
         </div>
     </section>
+
+    <footer class="p-10 text-center opacity-20 text-[9px] uppercase tracking-[0.5em]">
+        Hyderabad / Remote / Global
+    </footer>
 
 </body>
 </html>
